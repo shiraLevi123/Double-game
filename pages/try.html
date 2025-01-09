@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dobble S&M</title>
+    <script src="pages/Dobble.js"></script>
+    <link href="pages/Dobble.css" rel="stylesheet">
+    <link rel="icon" href="more/logo dobble.png" >
+</head>
+<body id="page1">
+    <div id="title1"><h1>Dobble</h1></div>
+    <div class="button-container">
+        <button id="instructionButton">Instruction</button>
+        <button id="startButton">Start Game</button>
+    </div>
+
+    <audio id="audio" src="../sound/clik.mp3"></audio>
+    
+
+    <script>
+        var audio = document.getElementById("audio");
+
+        var instructionButton = document.getElementById("instructionButton");
+        var startButton = document.getElementById("startButton");
+
+        function playAudio() {
+            audio.play();
+        }
+
+        instructionButton.addEventListener("click", playAudio);
+        startButton.addEventListener("click", playAudio);
+    </script>
+</body>
+</html>

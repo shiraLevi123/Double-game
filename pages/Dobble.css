@@ -1,0 +1,401 @@
+/* order: top, right, bottom, left.   */
+   /*========================================================עיצוב קבוע========================================================= */
+
+body{
+    background-color: #FDFCDC;
+  }
+  #page1 {
+    background-image: url('../more/רקע.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden; /* Ensures no content overflow */
+  }
+  #page2 {
+    background-image: url('../more/רקע\ 2.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden; /* Ensures no content overflow */
+  }
+
+/* כפתור שמוביל לדף הבית */
+.logo {
+  position: fixed;
+  top: 2%;
+  left: 2%;
+}
+
+.logo img {
+  width: 12%;
+  height: auto;
+  transition: transform 0.3s; /* Add smooth transition */
+}
+
+.logo img:hover {
+  transform: scale(1.3);
+}
+
+#title1{
+  text-align: center; 
+  font-size: 15vh; 
+  color: #168aad; 
+ font-family: fontgame ; 
+
+}
+.title2{
+text-align: center; 
+font-size: 8vh; 
+color: #168aad; 
+font-family:fontgame;  
+margin-top: 2%;
+white-space: nowrap; 
+}
+
+h1{
+  color: #0081A7;
+}
+
+   /*=========================================================עיצוב קלפי המשחק והתמונות========================================================== */
+  
+
+/* עיצוב קלף המשחק בעצמו*/
+.card {
+  background-color: #fffccf;
+  border:0.5vh solid #0081A7;
+  width: 55vh;
+  height: 55vh;
+  border-radius: 50%;  
+  justify-content: center;
+  align-items: center;
+  /* order: top, right, bottom, left.   */
+  padding-top: 5%; 
+  padding-bottom: 3%;
+  padding-left: 4%;
+  padding-right: 4%;
+
+  margin-right: 3%;
+  animation: changeColor 6s linear infinite;
+  overflow: hidden; 
+ }
+
+   @keyframes changeColor {
+    0% { border-color: #0081A7; }
+    20% { border-color: #00AFB9; }
+    50% { border-color: #F07167; }  
+   70% { border-color: #FED9B7; }
+   80% { border-color: #00AFB9; }
+    100% { border-color: #0081A7; }
+  }
+
+
+  /* עיצוב מיכל הכרטיסים במשחק */
+  .card-container {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+  }
+
+ 
+  /*עיצוב כל תמונה בתוך הכרטיס*/
+  span img {
+    width: auto;
+    height: 13vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* padding: 6%; */
+    margin: 2.5%;
+    transition: transform 0.3s, box-shadow 0.3s;
+  
+  }
+
+  span img:hover{
+    transform: scale(1.1);
+  }
+  /*=========================================================עיצוב החלון של גמר המשחק=========================================================== */
+
+
+  /* עיצוב החלון שקופץ בגמר המשחק */
+  #windowGameOver {
+    border: 5px solid;
+    border-image: linear-gradient(to right, #00AFB9, #FED9B7, #F07167) 30;
+    border-image-slice: 1;
+    display: none;
+    position: fixed;
+    top: 10%;
+    bottom: 10%;
+    left: 12%;
+    right: 12%;
+    background-color: rgba(253, 252, 220, 0.8);
+    /* align-items: center;
+    justify-self: center; */
+
+    border: 3% solid #0081A7;
+}
+
+
+
+.end {
+  border: none;
+  font-size: 6vh;
+  margin-bottom: 20px;
+  color: #168aad;
+  font-family: fontgame;
+  text-align: center; 
+}
+
+#inTheEnd {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2.5%; 
+}
+
+#imgConfety{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2.5%; 
+  width: 50%;
+  height: auto;}
+
+#imgWin{
+  height: 200px;
+  width: auto;
+}
+
+
+
+#record{  animation: changeColor1 5s infinite; 
+}
+
+
+@keyframes changeColor1 {
+ 0% {color: #0081A7;}
+ 20% { color: #00AFB9;}
+ 40% {color: #F07167;}
+ 60% { color: #0081A7;}
+ 80% {color: #00AFB9;}
+ 100% {color: #F07167;}
+}
+
+/* @keyframes changeColor {
+  0% { border-color: #0081A7; }
+  20% { border-color: #00AFB9; }
+  50% { border-color: #F07167; }  
+ 70% { border-color: #FED9B7; }
+ 80% { border-color: #00AFB9; }
+  100% { border-color: #0081A7; } */
+
+
+/* עיצוב הדיב המקיף את הכפתורים */
+#posbuttons {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+}
+
+/* עיצוב כפתורי גמר המשחק- ניסיון חוזר - יציאה */
+#windowGameOver button {
+    background-color: #00AFB9;
+    color: #FDFCDC;
+    font-family: fontgame; 
+    border-radius: 30px;
+    border: none;
+    width: 450px;
+    height: 80px;
+    font-size: 6Vh;
+    margin: 20px;
+    padding-bottom: 100px;
+    justify-content: center; 
+    align-items: center; 
+padding-top: 5%;
+}
+/* order: top, right, bottom, left.   */
+/*============================================================ כפתורי דף הבית============================================================ */
+.button-container {
+  position: fixed;
+        bottom: 150px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 10px;}
+
+  
+  .button-container button {
+    background-color:#00AFB9 ;
+    color:#FDFCDC;
+    font-family: fontgame; 
+    border-radius: 30px  ;
+    border:none;
+    width: 450px;
+    height: 100px;
+    font-size: 70px;
+    margin: 20px;
+    padding-bottom: 4vh; 
+    transition: transform 0.3s, box-shadow 0.3s; 
+}
+
+ 
+#button:hover {
+  background-color: #0081A7; /* Darker color on hover */
+  transform: scale(1.1); /* Increase size on hover */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+
+} 
+
+
+
+  /*=====================================================עיצוב כפתורי הרמות קל בינוני קשה  ====== ותיבת הכנסת שם==================================================== */
+  .button-level {
+    margin-top: 10px; /* Reduce the top margin */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+.game-button {
+  font-family: fontgame;
+  border-radius: 30px;
+  border: none;
+  width: 450px;
+  height: 100px;
+  font-size: 70px;
+  margin: 20px;
+  padding-bottom: 100px;
+  transition: transform 0.3s, box-shadow 0.3s; 
+}
+
+.game-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.easy-button {
+    background-color: #00AFB9;
+    color: #FDFCDC;
+}
+
+.medium-button {
+    background-color: #f0a865;
+    color: #FDFCDC;
+}
+
+.hard-button {
+    background-color: #F07167;
+    color: #FDFCDC;
+}
+
+
+/* עיצוב הדיב של הקלט */
+#enterName {
+  font-size: 2.5vh;
+  text-align: center;
+  padding: 20px;
+  border-radius: 5px;
+  color: #168aad;
+  font-family: fontgame;
+  width: 80%;
+  max-width: 450px;
+  margin: 20px auto;
+  background-color: #FDFCDC;
+}
+input[type="text"] {
+  color: #168aad;
+  border-radius: 30px;
+  padding: 10px 20px;
+  font-size: 24px;
+  margin-bottom: 20px;
+  border: 2px solid #00AFB9;
+  outline: none;
+  width: 100%;
+  direction: rtl;
+}
+
+input[type="text"]:focus {
+  border-color: #0081A7;
+}
+
+
+
+  /* עיצוה הטימר */
+
+  #timer {
+    text-align: center;
+    font-size: 10vh;
+    font-family: fontgame;
+    padding: 2%;
+    color: #F07167;
+
+  }
+  /* עיצוה הנקודות */
+  #score {
+    border: none;
+    /* border-radius: 30px; */
+    padding: 10px 20px;
+    font-size: 3vh;
+    margin-bottom: 20px;
+    /* background-color: #FDFCDC; */
+    color: #168aad;
+    font-family: fontgame;
+    width: 15%; 
+    position: fixed;
+    top: 2%;
+    right: 2%;
+  }
+/*================= ===========================================עיצוב דף ההוראות=========================================================== */
+#instractionPage {
+
+  text-align: center;
+  margin: 0 20% 0 20%;
+  padding: 20px;
+
+}
+
+#instractionPage p {
+  font-family: fonthebrew;
+  font-size: 4vh; 
+  color: #333; 
+  margin-bottom: 20px;
+}
+
+#instractionPage h2 {
+  font-size:6vh; 
+  font-family: fonthebrew;
+  color: #168aad; 
+  margin-bottom: 15px;
+}
+
+#instractionPage h1 {
+  font-family: fonthebrew;
+  font-size: 8vh; 
+  color: #F07167; 
+  margin-bottom: 20px;
+}
+
+
+       @font-face{
+          font-family: 'fontgame'; 
+          src: url('../more/LilitaOne-Regular.ttf') format('truetype'); 
+          font-weight: normal;
+          font-style: normal; 
+        } 
+
+        @font-face{
+          font-family: 'fonthebrew'; 
+          src: url('../more/Fredoka-Medium.ttf') format('truetype'); 
+          font-weight: bold;
+          font-style: normal; 
+        } 
+

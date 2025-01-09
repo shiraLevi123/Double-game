@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dobble M&S</title>
+    <link rel="icon" href="../more/logo dobble.png" >
+
+    <script src="Dobble.js"></script>
+    <link href="Dobble.css" rel="stylesheet">
+
+</head>
+<body>
+    <div class="logo"><a href="../Dobble.html"><img src="../more/logo dobble.png" alt="Home"></a></div>
+    <br><br>
+
+    <div id="enterName">
+        <div>
+            <h2 class="title2">Enter your name </h2>
+        </div>
+        <input type="text" placeholder="(:" id="userName" required autofocus oninput="saveUserName()">
+    </div>
+
+
+<div>
+ <h2 class="title2">choose level</h2>  
+ <div class="button-level" id="chooseLevel">
+    <button class="game-button easy-button" onclick="deflevel(1)">Easy</button>
+    <button class="game-button medium-button" onclick="deflevel(2)">Medium</button>
+    <button class="game-button hard-button" onclick="deflevel(3)">Hard</button>
+</div>
+</div>
+
+ 
+
+
+  
+
+</body>
+</html>
